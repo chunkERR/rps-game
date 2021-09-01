@@ -1,8 +1,43 @@
+<!DOCTYPE html>
+<body>
 <script>
-    let plays = ["Rock", "Paper", "Scissors"]
-    let opponentPlay = ""
+    let playerSelection = window.prompt("Please enter Rock, Paper or Scissors")
+    playerSelection.toUpperCase()
+    const plays = ["Rock", "Paper", "Scissors"];
+    let playerScore = 0
+    let computerScore = 0
+    
+    
     function computerPlay() {
-        const opponentPlay = plays.[Math.floor.Math.random() * plays.length] 
-        return opponentPlay
+        const computerChoice = plays[Math.floor(Math.random() * plays.length)];
+        return computerChoice
     }
+    
+    
+    function playRound(playerSelection, computerChoice) {
+        if (playerSelection === computerChoice) {
+            return "It's a tie!"
+        }
+        if (
+        (playerSelection === 'ROCK' && computerSelection === 'SCISSORS') ||
+        (playerSelection === 'SCISSORS' && computerSelection === 'PAPER') ||
+        (playerSelection === 'PAPER' && computerSelection === 'ROCK')
+        ) {
+            playerScore++
+            return "You win!"
+        } (
+        (computerSelection === 'ROCK' && playerSelection === 'SCISSORS') ||
+        (computerSelection === 'SCISSORS' && playerSelection === 'PAPER') ||
+        (computerSelection === 'PAPER' && playerSelection === 'ROCK')
+        ) ;{
+            computerScore++
+            return "You lose!"
+        }
+    } 
+        function game() {
+            if (playerScore = 5) OR (computerScore = 5) {
+                return "Game over."
+            };
+        }
 </script>
+</body>
